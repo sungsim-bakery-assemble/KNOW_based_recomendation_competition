@@ -1,0 +1,18 @@
+model_name : xgboost
+data_path : ../data/2017/train.csv
+preprocessing : 
+hp :
+  xgboost:
+    n_estimators : 100
+    use_label_encoder : False
+    learning_rate : False 
+    verbosity : False
+    objective : "multi:softmax"
+    booster : False
+    tree_method : False
+    n_jobs : -1
+    reg_alpha : False
+    reg_lambda : False
+    random_state : 20210827
+
+  lightgbm:
