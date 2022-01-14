@@ -4,7 +4,7 @@ from typing import Dict, Optional, Union
 
 def load_model(
     model_name : str, 
-    config : Dict,
+    hp : Dict,
 ) -> Union[XGBClassifier, LGBMClassifier] :
     """
         Load models backbone 
@@ -21,6 +21,7 @@ def load_model(
         "lightgbm"  : LGBMClassifier,
         "torch" : None, # Implementing...
     }
-    model = models(**config)
+    
+    model = models[model_name](**hp)
 
     return model

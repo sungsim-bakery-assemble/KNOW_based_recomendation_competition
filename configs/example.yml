@@ -1,6 +1,18 @@
+# Training
+exp_name : xgb1-result
 model_name : xgboost
-data_path : ../data/2017/train.csv
-preprocessing : 
+model_save_dir : ../models/
+result_dir : ../results/
+
+# Inference
+inference_model_path : ../models/xgb-result
+
+# Data
+train_data_path : ../data/train/KNOW_2017.csv
+test_data_path : ../data/test/KNOW_2017_test.csv
+preprocessing : False
+
+# Hyper Parameters
 hp :
   xgboost:
     n_estimators : 100
@@ -16,3 +28,6 @@ hp :
     random_state : 20210827
 
   lightgbm:
+
+
+  torch:

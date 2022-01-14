@@ -9,3 +9,7 @@ def load_yaml(config_path : str) -> Dict:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
     return config
+
+
+def check_params(params):
+    return {key : val for key,val in params.items() if val}
