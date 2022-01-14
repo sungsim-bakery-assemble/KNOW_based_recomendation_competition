@@ -17,7 +17,7 @@ hp :
   xgboost:
     n_estimators : 100
     use_label_encoder : False
-    learning_rate : False 
+    learning_rate : 0.1
     verbosity : False
     objective : "multi:softmax"
     booster : False
@@ -28,6 +28,11 @@ hp :
     random_state : 20210827
 
   lightgbm:
-
-
-  torch:
+    n_estimators : 100
+    boosting_type : gbdt
+    num_leaves : 31
+    max_depth : 1, 
+    learning_rate : 0.1
+    objective : False 
+    class_weight : False
+    random_state : 20210827
